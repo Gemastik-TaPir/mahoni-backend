@@ -27,7 +27,7 @@ load_dotenv()
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 APPS = [
-    
+    'apps.account.apps.AccountConfig'
 ]
 
 MODULES = [
@@ -151,6 +151,8 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+AUTH_USER_MODEL = 'account.Account'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
