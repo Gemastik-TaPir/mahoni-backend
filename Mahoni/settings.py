@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'air_quality.apps.AirQualityConfig',
+    'api_air_quality.apps.ApiAirQualityConfig',
 ]
 
 MIDDLEWARE = [
